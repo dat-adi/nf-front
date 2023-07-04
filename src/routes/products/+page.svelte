@@ -31,7 +31,7 @@
         {#if products}
             {#each products as product}
             <div class="card">
-                <img class="w-full" src="/robin-thang-In-qzXa-po8-unsplash-1-to-1.jpg" alt="Chillis in a bowl">
+                <img class="w-full" src="/img/robin-thang-In-qzXa-po8-unsplash-1-to-1.jpg" alt="Chillis in a bowl">
                 <div class="px-6 py-4 dark:bg-neutral-800">
                     <div class="font-bold text-xl dark:text-neutal-500 mb-2">{product.name}</div>
                     <p class="text-neutral-200 text-base mb-4">
