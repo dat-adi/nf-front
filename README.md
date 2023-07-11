@@ -28,31 +28,23 @@ because that's not expected behavior.
 The frontend is based on SvelteKit + Skeleton UI toolkit, and in order to get
 started working, there's three steps to be followed.
 
-1. Clone the repository and move into the project directory.
-
 ```sh
+# Clone and move into the repository
 git clone https://git.sr.ht/~dat-adi/nf-front
-```
-
-2. Install the dependencies
-
-```sh
 cd nf-front
+
+# Install the dependencies
 npm install
+
+# Run the application
+npm run dev
+
+# The application now should be running at http://localhost:5173/
 ```
 
 In the case that you prefer `yarn` over `npm`, you're free to proceed with your
 package manager preference. However, the underlying dependencies for this 
-projectwill depend on `npm` for the time being.
-
-3. Run the application!
-
-```sh
-npm run dev
-```
-
-You should be set on your way to running the application at this point. If you
-haven't reconfigured it yet, this should be located at [http://localhost:5173/](http://localhost:5173/).
+project will depend on `npm` for the time being.
 
 ### Enabling the full experience
 
