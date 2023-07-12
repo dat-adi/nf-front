@@ -20,7 +20,7 @@ model by the end of it. The links to these projects are provided down below,
 
 Please note that you will need to set up both repositories on your development
 system in order for the application to run as expected. If the project fails
-anywhere due to the absence of another service, please raise a [ticket](https://git.sr.ht/~dat-adi/nelfoo-bugs)
+anywhere due to the absence of another service, please raise a [ticket](https://todo.sr.ht/~dat-adi/nelfoo-bugs)
 because that's not expected behavior.
 
 ## Setting up the frontend
