@@ -2,19 +2,21 @@
     import { onMount } from "svelte";
 
     // Defining the product type
-    type Product = {
+    type ProductItem = {
         name: string;
         description: string;
+        imageUrl: string;
+        price: number;
         quantity: number;
     };
 
     // Defining the data holding variable
-    let products: Product[];
+    let products: ProductItem[];
 
     // Requesting the backend for the products
     onMount(async () => {
         await fetch(
-            `http://localhost:3000/api/v1/products`,
+            `http://localhost:3000/api/v1/products/`,
             {
                 method: "GET"
             }
@@ -38,12 +40,15 @@
                       {product.description}
                     </p>
                     <div class="flex flex-row">
-                        <p class="basis-1/2 text-xs text-neutral-500 py-4 px-12 dark:text-neutral-300">
-                        Stock left: {product.quantity}
+                        <p class="basis-1/3 text-xs text-neutral-500 py-4 px-12 dark:text-neutral-300">
+                        {product.quantity} grams
+                        </p>
+                        <p class="basis-1/3 text-xs text-neutral-500 py-4 px-12 dark:text-neutral-300">
+                        {product.price}
                         </p>
                         <button
                         type="button"
-                        class="basis-1/2 variant-filled-primary py-2 rounded hover:variant-filled-secondary">
+                        class="basis-1/3 variant-filled-primary py-2 rounded hover:variant-filled-secondary">
                             Order now!
                         </button>
                     </div>
