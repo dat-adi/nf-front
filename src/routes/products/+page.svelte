@@ -32,27 +32,29 @@
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {#if products}
             {#each products as product}
-            <div class="card">
-                <img class="w-full" src="/img/robin-thang-In-qzXa-po8-unsplash-1-to-1.jpg" alt="Chillis in a bowl">
-                <div class="px-6 py-4 dark:bg-neutral-800">
-                    <div class="font-bold text-xl dark:text-neutal-500 mb-2">{product.name}</div>
-                    <p class="text-neutral-200 text-base mb-4">
-                      {product.description}
-                    </p>
-                    <div class="flex flex-row">
-                        <p class="basis-1/3 text-xs text-neutral-500 py-4 px-12 dark:text-neutral-300">
-                        {product.quantity} grams
-                        </p>
-                        <p class="basis-1/3 text-xs text-neutral-500 py-4 px-12 dark:text-neutral-300">
-                        {product.price}
-                        </p>
-                        <button
-                        type="button"
-                        class="basis-1/3 variant-filled-primary py-2 rounded hover:variant-filled-secondary">
-                            Order now!
-                        </button>
+            <div class="card card-hover overflow-hidden dark:bg-neutral-800">
+                <header>
+                    <img
+                    src="{product.imageUrl}"
+                    class="bg-black/50 w-full aspect-[1/1]" alt="Post"/>
+                </header>
+                <div class="p-4 space-y-4">
+                    <div class="flex">
+                        <h3 class="flex-1 h3" data-toc-ignore>{product.name}</h3>
+                        <code class="kbd">{product.quantity} grams</code>
+                        <kbd class="kbd" >Rs. {product.price}</kbd>
                     </div>
+                    <article>
+                        <p>{product.description}</p>
+                    </article>
                 </div>
+                <footer class="card-footer flex">
+                    <button
+                    class="btn variant-filled-primary rounded flex-1"
+                    on:click={addToCart}>
+                        Add to cart
+                    </button>
+                </footer>
             </div>
             {/each}
         {:else}
