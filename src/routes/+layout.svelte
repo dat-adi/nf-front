@@ -8,8 +8,10 @@
     import { AppShell } from '@skeletonlabs/skeleton';
     import Navbar from "./Navbar.svelte";
     import Footer from "./Footer.svelte";
+	import { Toast } from "@skeletonlabs/skeleton";
 </script>
 
+<Toast />
 <AppShell>
 	<svelte:fragment slot="header"><Navbar /></svelte:fragment>
 	<!-- (sidebarLeft) -->

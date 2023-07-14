@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { toastStore, type ToastSettings } from "@skeletonlabs/skeleton";
     import { onMount } from "svelte";
 
     // Defining the product type
@@ -12,6 +13,15 @@
 
     // Defining the data holding variable
     let products: ProductItem[];
+
+    // TODO(dat-adi): Actually have the function add to a cart.
+    function addToCart(): void {
+        const t: ToastSettings = {
+            message: "Added the item to the cart!",
+            callback: (response) => console.log(response)
+        }
+        toastStore.trigger(t)
+    }
 
     // Requesting the backend for the products
     onMount(async () => {
