@@ -6,8 +6,8 @@
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
     import { AppShell } from '@skeletonlabs/skeleton';
-    import Navbar from "./Navbar.svelte";
-    import Footer from "./Footer.svelte";
+    import Navbar from "$lib/components/Navbar.svelte";
+    import Footer from "$lib/components/Footer.svelte";
 	import { Toast } from "@skeletonlabs/skeleton";
 </script>
 
