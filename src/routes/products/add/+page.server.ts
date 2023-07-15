@@ -21,6 +21,20 @@ export const actions = {
       return fail(400, { form });
     }
 
-    return { form };
+    const response = await fetch("http://localhost:3000/api/v1/products/", {
+      method: "POST",
+      body: JSON.stringify({
+        "Name": form.data.name,
+        "Description": form.data.description,
+        "ImageUrl": form.data.imageUrl,
+        "Quantity": form.data.quantity,
+        "Price": form.data.price
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+
+    console.log(response);
   }
 }

@@ -39,15 +39,40 @@
         {...$constraints.description} />
         <div class="p-2" />
 
-        <label class="label" for="quantity">Product Quantity</label>
+        <label class="label" for="imageUrl">Provide a URL to the image</label>
+        <input
+        class="input rounded"
+        type="text"
+        id="imageUrl"
+        name="imageUrl"
+        aria-invalid={$errors.imageUrl ? 'true' : undefined}
+        bind:value={$form.imageUrl}
+        {...$constraints.imageUrl} />
+        <div class="p-2" />
+
+        <label class="label" for="price">Price of the product</label>
         <input
         class="input rounded"
         type="number"
+        id="price"
+        name="price"
+        aria-invalid={$errors.price ? 'true' : undefined}
+        bind:value={$form.price}
+        {...$constraints.price} />
+        <div class="p-2" />
+
+        <label class="label" for="quantity">How many grams?</label>
+        <select
+        class="select rounded"
         id="quantity"
         name="quantity"
         aria-invalid={$errors.quantity ? 'true' : undefined}
         bind:value={$form.quantity}
-        {...$constraints.quantity} />
+        {...$constraints.quantity}>
+            <option value="250">250 grams</option>
+            <option value="500">500 grams</option>
+            <option value="1000">1 kg</option>
+        </select>
         <div class="p-2" />
 
         <button
