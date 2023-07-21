@@ -20,6 +20,6 @@
 	<!-- Router Slot -->
 	<slot />
 	<!-- ---- / ---- -->
-	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
+	<!-- <svelte:fragment slot="pageFooter"><Footer /></svelte:fragment> -->
 	<!-- (footer) -->
 </AppShell>

@@ -3,11 +3,13 @@
         <span class="text-4xl tracking-light font-princess-sofia">
             <a href="/">Nellore Foods</a>
         </span>
-        <ul class="flex space-x-6">
-            <li class="flex"><a href="/about">About</a></li>
-            <li class="flex"><a href="/products">Products</a></li>
-            <li class="flex"><a href="/contact">Contact Us</a></li>
-        </ul>
+        <!--
+            <ul class="flex space-x-6">
+                <li class="flex"><a href="/about">About</a></li>
+                <li class="flex"><a href="/products">Products</a></li>
+                <li class="flex"><a href="/contact">Contact Us</a></li>
+            </ul>
+        -->
         <div class="block lg:hidden">
             <button class="flex items-center px-3 py-2 border rounded hover:text-white hover:border-white">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
